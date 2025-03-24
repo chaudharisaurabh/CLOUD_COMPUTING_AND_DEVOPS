@@ -156,13 +156,51 @@ git fetch origin
 9\. Finally update all the code on the private branch  
 git merge privatebranch
 
-# Assignment 5 (Revise)
+# Assignment 5 
 
-1\.  Create a Git Flow workflow architecture on Git  
-Ans:   
+Ans: 
 Git workflow consists of master, release , develop, feature and hotfix branch.
 
-2\. Create all the required branches  
-3\. Starting from the feature branch, push the branch to the master, following the architecture  
-4\. Push a urgent.txt on master using hotfix
+Create a feature\
+git checkout develop\
+git checkout -b feature1
+
+Complete the feature
+
+git checkout develop\
+git merge feature/1\
+git branch -d feature1
+
+Create a release and complete the release
+
+git checkout develop\
+git checkout -b release1
+
+
+git checkout master\
+git merge release1\
+git tag -a v1.0\
+git checkout develop\
+git merge release1
+
+
+
+
+Hotfix to be delivered
+
+git checkout master\
+git checkout -b hotfix/issue1\
+touch urgent.txt\
+git add *\
+git commit -m “Hotfix”\
+git push origin master
+
+
+git checkout master\
+git merge hotfix/issue1\
+git tag -a hotfix-v1\
+git checkout develop\
+git merge hotfix/issue1\
+git branch -d hotfix/issue1
+
 
