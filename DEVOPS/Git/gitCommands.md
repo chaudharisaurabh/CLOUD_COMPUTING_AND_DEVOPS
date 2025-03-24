@@ -3,7 +3,7 @@
 [back](./Introduction.md)
 
 
-**Git Commands:**
+**Git Commands:** (Note clone it to see the images)
 
 ## **1\. Initialize a local repository
 ![][image1]**
